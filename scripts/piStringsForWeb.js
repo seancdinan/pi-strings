@@ -2,15 +2,13 @@
 //**************  Boring Parts  *******************
 //*************************************************
 // Load in the data
-var rawDigits = require('./piDigits.js');
-var piDigits = JSON.parse(rawDigits);
-
+//var rawDigits = require(['./piDigits.js'], function(){});
+//var piDigits = JSON.parse(rawDigits[0]);
 // Remove the spaces and decimal
-var digits = piDigits[0]["numbers"][0];
+//var digits = piDigits[0]["numbers"][0];
+var digits = piDigits[0]["numbers"];
 digits = digits.replace(/\s/g, '');
 digits = digits.replace(/\./g, '');
-
-
 //*************************************************
 //*****************  Functions  *******************
 //*************************************************
@@ -38,8 +36,42 @@ function isInString(input, string) {
 }
 
 //*************************************************
-//************ Run Some Tests  ********************
+//***************  HTML Inputs  *******************
 //*************************************************
-	
 
-console.log(isInString('2516', digits))
+var input = document.getElementById('searchValue').value;
+var runIt = document.getElementById('testSubmit');
+var output= document.getElementById('answer');
+
+// function printResult(input,button,output) {
+// 	button.onclick = function() {
+// 		//var input = document.getElementById('searchValue').value;
+// 		var result = isInString(input, digits);
+// 		output.textContent = result;
+// 		alert(result);
+// 	}
+// }
+function printResult(input) {
+	var result = isInString(input, digits);
+	alert(result);
+}
+
+printResult(314);
+//alert(digits);
+
+// runIt.onclick = function() {
+// 	var input = document.getElementById('searchValue').value;
+// 	var result = isInString(input, digits);
+// 	var printAnswer = document.getElementById('answer');
+// 	printAnswer.textContent = result;
+// }
+
+
+
+
+
+
+
+
+
+
