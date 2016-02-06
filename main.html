@@ -9,16 +9,15 @@
 
 <h1>Find a Number in Pi</h1>
 
-<form id="mainForm">
+<div class="inputArea">
+<label>Your number:</label>
+<input type="text" id="searchValue">
+<button onclick="findMatch(document.getElementById('searchValue').value)">Is it there?</button>
+</div>
 
-<label>Your number:</label><input type="text" id="searchValue">
-<button id="testSubmit">Is it there?</button>
+<div class="results"><p>Output: </p><p id="answer"></p></div>
 
-</form>
-
-<p>Output: <span id="answer"></span></p>
-
-<script type="text/javascript" src="scripts/piDigits.js"></script>
+<script type="text/javascript" src="scripts/piDigitsForWeb.js"></script>
 <script type="text/javascript" src="scripts/piStringsForWeb.js"></script>
 </body>
 </html>

@@ -6,11 +6,12 @@ body {
 h1 {
 	text-align: center;
 	margin-top: 50px;
+	margin-bottom: -60px;
 	color: hsl(45, 30%, 70%);
 	font-size: 48px;
 }
 
-form {
+.inputArea {
 	text-align: center;
 	margin-top: 100px;
 }
@@ -25,4 +26,30 @@ p {
 	font-size: 24px;
 	padding-right: 20px;
 	text-align: center;
+}
+
+input {
+	position: relative;
+	margin: 25px auto;
+	font-size: 24px;
+	border: 1px solid hsl(45, 30%, 70%);
+	padding: 11px;
+	background-color: transparent;
+	color: hsl(45, 30%, 70%);
+}
+
+button {
+	font-size: 24px;
+	border: 1px solid hsl(45, 30%, 70%);
+	padding: 10px;
+	background-color: transparent;
+	color: hsl(45, 30%, 70%);
+}
+
+.results {
+	position: relative;
+	border: 1px solid hsl(45, 30%, 70%);
+	padding: 10px;
+	width: 40%;
+	margin: 25px auto;
 }
